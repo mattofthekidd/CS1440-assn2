@@ -42,3 +42,34 @@ int Analyst::getSeedMoney() {
 std::vector<Transaction> Analyst::getHistory() {
     return m_history;
 }
+
+int Analyst::computeTotalProfitLoss() {
+    //calculate for this analyst based on all of their transactions
+    int total = 0;
+    for(int i = 0; i < m_history.size() - 1; i++) {
+        if(m_history.at(i).getSymbol() == "AMZN") { //remove this if statement before turning in
+            total += m_history.at(i).computeProfitLoss();
+        }
+    }
+    return total;
+}
+
+int Analyst::computeProfitLossPerDay() {
+    //calculate for this analyst based on all of their transactions
+    //
+    return 0;
+}
+
+int Analyst::computeStockPerformance(std::string symbol) {
+    //(total profit/loss) / ((last sale time - first purchase time) / 1440)
+    int minPos = 0;
+    for(int start = 0; start < m_history.size() - 1; start++) {
+        for (int scanPos = 0; scanPos < m_history.size(); scanPos++)
+            if(m_history.at(scanPos).getSymbol() == symbol) {
+                //add to computation for stock performance
+            }
+
+        (computeTotalProfitLoss() / (m_history.at(m_history.size() - 1).getSaleDateTime() - m_history.at(0).getPurchaseDateTime()) / 1440);
+    }
+    return 0;
+}

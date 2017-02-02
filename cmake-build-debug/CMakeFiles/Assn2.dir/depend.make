@@ -8,9 +8,6 @@ CMakeFiles/Assn2.dir/Analyst.cpp.o: ../Transaction.hpp
 CMakeFiles/Assn2.dir/Transaction.cpp.o: ../Transaction.cpp
 CMakeFiles/Assn2.dir/Transaction.cpp.o: ../Transaction.hpp
 
-CMakeFiles/Assn2.dir/Utils.cpp.o: ../Utils.cpp
-CMakeFiles/Assn2.dir/Utils.cpp.o: ../Utils.hpp
-
 CMakeFiles/Assn2.dir/main.cpp.o: ../Analyst.hpp
 CMakeFiles/Assn2.dir/main.cpp.o: ../Transaction.hpp
 CMakeFiles/Assn2.dir/main.cpp.o: ../main.cpp

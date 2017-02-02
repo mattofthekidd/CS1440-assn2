@@ -20,6 +20,12 @@ public:
     int getSeedMoney();
     std::vector<Transaction> getHistory();
 
+    //
+    // Using starter code/diagram as reference
+    int computeTotalProfitLoss();
+    int computeProfitLossPerDay();
+    int computeStockPerformance(std::string symbol);
+
 private:
     std::string m_name;
     std::string m_initials;

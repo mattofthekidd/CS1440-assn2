@@ -1,0 +1,37 @@
+Stock symbol A short string that identifies the company
+
+Quantity (Q) A integer that represent the number of shares purchase
+and sold
+
+Purchase Date/time (PT) A number that represents time of purchase in minutes
+since Jan 1, 2016
+
+Purchase Price (PP) An integer represents the purchase price in cents. For
+example, 1234 would be a purchase price of $12.34.
+
+Purchase Trans. Fee (PF) An integer represents the purchase transaction fee in
+cents.
+
+Sale Date/time (ST) A number that represents time of purchase in minutes
+since Jan 1, 2016
+
+Sale Price (SP) An integer represents the purchase price in cents. For
+example, 1234 would be a purchase price of $12.34.
+
+Sale Trans. Fee (SF) An integer represents the purchase transaction fee in
+cents.
+Q, PT, PP, PF, ST, SP, SF
+
+The amount of money invested (INV) in a purchase/sale is the cost of the shared adjust plus both the purchase fee and the sales fees
+	INV = Q*PP + PF + SF
+
+So, the profit/loss (PL) for each purchase/sale can be computed as
+	PL = Q*SP – INV
+
+quantity | purchaseDateTime | purchasePrice | purchaseFee | saleDateTime | salePrice | saleFee
+-----------------------------------------------------------------------------------------------
+10       | 5,256,000        | 51,000        | 995         | 5,306,400    | 63,000    | 995
+30       | 5,297,760        | 62,000        | 995         | 5,378,700    | 61,000    | 995
+10       | 5,299,200        | 62,500        | 995         | 5,507,280    | 68,000    | 500
+-----------------------------------------------------------------------------------------------
+         |                  |               |             |              |           |

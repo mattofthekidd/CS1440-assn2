@@ -24,6 +24,11 @@ public:
     int getSalePrice();
     int getSaleFee();
 
+    //
+    // Referencing from Starter code/Diagram
+    int computeInvestmentAmount();
+    int computeProfitLoss();
+
     std::stringstream parse(std::stringstream &line, const int &size);
 
 private:

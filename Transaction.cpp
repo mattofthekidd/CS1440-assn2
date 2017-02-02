@@ -50,6 +50,13 @@ int Transaction::getSaleFee() {
     return m_saleFee;
 }
 
+int Transaction::computeInvestmentAmount() {
+    return m_quantity * m_purchasePrice + m_purchaseFee + m_saleFee;
+}
+
+int Transaction::computeProfitLoss() {
+    return m_quantity * m_salePrice - computeInvestmentAmount();
+}
 
 std::stringstream Transaction::parse(std::stringstream &line, const int &size) {
     std::string value;
@@ -60,13 +67,6 @@ std::stringstream Transaction::parse(std::stringstream &line, const int &size) {
             std::getline(line, value, delim);
             x << value << ' ';
         }
-//        m_quantity = std::stoi(temp.at(1));
-//        m_purchaseDateTime = std::stoi(temp.at(2));
-//        m_purchasePrice = std::stoi(temp.at(3));
-//        m_purchaseFee = std::stoi(temp.at(4));
-//        m_saleDateTime = std::stoi(temp.at(5));
-//        m_salePrice = std::stoi(temp.at(6));
-//        m_saleFee = std::stoi(temp.at(7));
-
     return x;
 }
+
