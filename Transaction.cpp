@@ -5,8 +5,17 @@
 #include "Transaction.hpp"
 
 
-Transaction::Transaction(std::ifstream &fin, const int &size) {
-   parse(fin, size);
+Transaction::Transaction(std::string &line, const int &size) {
+    std::stringstream split(line);
+    auto ss = parse(split, size);
+    ss >> m_symbol
+       >> m_quantity
+       >> m_purchaseDateTime
+       >> m_purchasePrice
+       >> m_purchaseFee
+       >> m_saleDateTime
+       >> m_salePrice
+       >> m_saleFee;
 }
 
 std::string Transaction::getSymbol() {
@@ -42,27 +51,22 @@ int Transaction::getSaleFee() {
 }
 
 
-void Transaction::parse(std::ifstream &fin, const int &size) {
-
+std::stringstream Transaction::parse(std::stringstream &line, const int &size) {
     std::string value;
-    std::vector<int> temp;
-    for(int record = 0; record < size - 1; record++) {
-        for(int line = 0; line < 7; line++) {
-            std::getline(fin, value, ',');
-            if(line == 0) {
-                m_symbol = value;
-            }
-            else {
-                temp.push_back(std::stoi(value));
-            }
-        }
-//        m_quantity = temp.at(0);
-//        m_purchaseDateTime = temp.at(1);
-//        m_purchasePrice = temp.at(2);
-//        m_purchaseFee = temp.at(3);
-//        m_saleDateTime = temp.at(4);
-//        m_salePrice = temp.at(5);
-//        m_saleFee = temp.at(6);
-    }
+    std::stringstream x;
+    char delim = ',';
 
+        for (int row = 0; row <= m_ROW_SIZE; row++) {
+            std::getline(line, value, delim);
+            x << value << ' ';
+        }
+//        m_quantity = std::stoi(temp.at(1));
+//        m_purchaseDateTime = std::stoi(temp.at(2));
+//        m_purchasePrice = std::stoi(temp.at(3));
+//        m_purchaseFee = std::stoi(temp.at(4));
+//        m_saleDateTime = std::stoi(temp.at(5));
+//        m_salePrice = std::stoi(temp.at(6));
+//        m_saleFee = std::stoi(temp.at(7));
+
+    return x;
 }

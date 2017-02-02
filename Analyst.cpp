@@ -5,6 +5,7 @@
 #include "Analyst.hpp"
 
 Analyst::Analyst(std::ifstream &fin) {
+    std::string line = "";
     std::getline(fin, m_name);
     std::getline(fin, m_initials);
     fin >> m_simulationDays;
@@ -16,7 +17,8 @@ Analyst::Analyst(std::ifstream &fin) {
 
     //This is the line that gets sent to Transaction
     while(!fin.eof()) {
-        Transaction x(fin, m_totalPurchases);
+        std::getline(fin, line);
+        Transaction x(line, m_totalPurchases);
         m_history.push_back(x);
     }
 }

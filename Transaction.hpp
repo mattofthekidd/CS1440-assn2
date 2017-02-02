@@ -13,7 +13,7 @@
 
 class Transaction {
 public:
-    Transaction(std::ifstream &fin, const int &size);
+    Transaction(std::string &line, const int &size);
 
     std::string getSymbol();
     int getQuantity();
@@ -24,9 +24,11 @@ public:
     int getSalePrice();
     int getSaleFee();
 
-    void parse(std::ifstream &fin, const int &size);
+    std::stringstream parse(std::stringstream &line, const int &size);
 
 private:
+
+    const int m_ROW_SIZE = 7;
 
     std::string m_symbol;
     int m_quantity;
