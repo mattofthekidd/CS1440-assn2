@@ -177,33 +177,6 @@ Transaction.cpp.s:
 	$(MAKE) -f CMakeFiles/Assn2.dir/build.make CMakeFiles/Assn2.dir/Transaction.cpp.s
 .PHONY : Transaction.cpp.s
 
-Utils.o: Utils.cpp.o
-
-.PHONY : Utils.o
-
-# target to build an object file
-Utils.cpp.o:
-	$(MAKE) -f CMakeFiles/Assn2.dir/build.make CMakeFiles/Assn2.dir/Utils.cpp.o
-.PHONY : Utils.cpp.o
-
-Utils.i: Utils.cpp.i
-
-.PHONY : Utils.i
-
-# target to preprocess a source file
-Utils.cpp.i:
-	$(MAKE) -f CMakeFiles/Assn2.dir/build.make CMakeFiles/Assn2.dir/Utils.cpp.i
-.PHONY : Utils.cpp.i
-
-Utils.s: Utils.cpp.s
-
-.PHONY : Utils.s
-
-# target to generate assembly for a file
-Utils.cpp.s:
-	$(MAKE) -f CMakeFiles/Assn2.dir/build.make CMakeFiles/Assn2.dir/Utils.cpp.s
-.PHONY : Utils.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -246,9 +219,6 @@ help:
 	@echo "... Transaction.o"
 	@echo "... Transaction.i"
 	@echo "... Transaction.s"
-	@echo "... Utils.o"
-	@echo "... Utils.i"
-	@echo "... Utils.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -90,12 +90,6 @@
 		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Transaction.hpp">
 			<Option target="Assn2"/>
 		</Unit>
-		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Utils.cpp">
-			<Option target="Assn2"/>
-		</Unit>
-		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Utils.hpp">
-			<Option target="Assn2"/>
-		</Unit>
 		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/main.cpp">
 			<Option target="Assn2"/>
 		</Unit>
