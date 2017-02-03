@@ -5,8 +5,18 @@ CMakeFiles/Assn2.dir/Analyst.cpp.o: ../Analyst.cpp
 CMakeFiles/Assn2.dir/Analyst.cpp.o: ../Analyst.hpp
 CMakeFiles/Assn2.dir/Analyst.cpp.o: ../Transaction.hpp
 
+CMakeFiles/Assn2.dir/Comparer.cpp.o: ../Analyst.hpp
+CMakeFiles/Assn2.dir/Comparer.cpp.o: ../Comparer.cpp
+CMakeFiles/Assn2.dir/Comparer.cpp.o: ../Comparer.h
+CMakeFiles/Assn2.dir/Comparer.cpp.o: ../Constants.h
+CMakeFiles/Assn2.dir/Comparer.cpp.o: ../Transaction.hpp
+CMakeFiles/Assn2.dir/Comparer.cpp.o: ../Utils.h
+
 CMakeFiles/Assn2.dir/Transaction.cpp.o: ../Transaction.cpp
 CMakeFiles/Assn2.dir/Transaction.cpp.o: ../Transaction.hpp
+
+CMakeFiles/Assn2.dir/Utils.cpp.o: ../Utils.cpp
+CMakeFiles/Assn2.dir/Utils.cpp.o: ../Utils.h
 
 CMakeFiles/Assn2.dir/main.cpp.o: ../Analyst.hpp
 CMakeFiles/Assn2.dir/main.cpp.o: ../Transaction.hpp

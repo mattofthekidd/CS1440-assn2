@@ -48,9 +48,9 @@ int Analyst::computeTotalProfitLoss() {
     //calculate for this analyst based on all of their transactions
     int total = 0;
     for (int i = 0; i < m_history.size() - 1; i++) {
-        if (m_history.at(i).getSymbol() == "AMZN") { //remove this if statement before turning in
+//        if (m_history.at(i).getSymbol() == "AMZN") { //remove this if statement before turning in
             total += m_history.at(i).computeProfitLoss();
-        }
+//        }
     }
     return total;
 }

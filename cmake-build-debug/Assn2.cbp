@@ -84,10 +84,25 @@
 		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Analyst.hpp">
 			<Option target="Assn2"/>
 		</Unit>
+		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Comparer.cpp">
+			<Option target="Assn2"/>
+		</Unit>
+		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Comparer.h">
+			<Option target="Assn2"/>
+		</Unit>
+		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Constants.h">
+			<Option target="Assn2"/>
+		</Unit>
 		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Transaction.cpp">
 			<Option target="Assn2"/>
 		</Unit>
 		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Transaction.hpp">
+			<Option target="Assn2"/>
+		</Unit>
+		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Utils.cpp">
+			<Option target="Assn2"/>
+		</Unit>
+		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Utils.h">
 			<Option target="Assn2"/>
 		</Unit>
 		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/main.cpp">
