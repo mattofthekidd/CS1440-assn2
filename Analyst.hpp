@@ -24,9 +24,10 @@ public:
     // Using starter code/diagram as reference
     int computeTotalProfitLoss();
     int computeProfitLossPerDay();
-    int computeStockPerformance(std::string symbol);
+    float computeStockPerformance(std::string symbol);
 
 private:
+    float findInvestmentDays(const std::string &, unsigned int &, unsigned int &);
     std::string m_name;
     std::string m_initials;
     int m_simulationDays;

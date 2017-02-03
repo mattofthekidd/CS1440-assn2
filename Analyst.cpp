@@ -2,6 +2,7 @@
 // Created by Matthew Kidd on 2/1/17.
 //
 
+#include <iostream>
 #include "Analyst.hpp"
 
 Analyst::Analyst(std::ifstream &fin) {
@@ -16,7 +17,7 @@ Analyst::Analyst(std::ifstream &fin) {
     fin.ignore();
 
     //This is the line that gets sent to Transaction
-    while(!fin.eof()) {
+    while (!fin.eof()) {
         std::getline(fin, line);
         Transaction x(line, m_totalPurchases);
         m_history.push_back(x);
@@ -46,8 +47,8 @@ std::vector<Transaction> Analyst::getHistory() {
 int Analyst::computeTotalProfitLoss() {
     //calculate for this analyst based on all of their transactions
     int total = 0;
-    for(int i = 0; i < m_history.size() - 1; i++) {
-        if(m_history.at(i).getSymbol() == "AMZN") { //remove this if statement before turning in
+    for (int i = 0; i < m_history.size() - 1; i++) {
+        if (m_history.at(i).getSymbol() == "AMZN") { //remove this if statement before turning in
             total += m_history.at(i).computeProfitLoss();
         }
     }
@@ -60,16 +61,30 @@ int Analyst::computeProfitLossPerDay() {
     return 0;
 }
 
-int Analyst::computeStockPerformance(std::string symbol) {
+float Analyst::computeStockPerformance(std::string symbol) {
     //(total profit/loss) / ((last sale time - first purchase time) / 1440)
-    int minPos = 0;
-    for(int start = 0; start < m_history.size() - 1; start++) {
-        for (int scanPos = 0; scanPos < m_history.size(); scanPos++)
-            if(m_history.at(scanPos).getSymbol() == symbol) {
-                //add to computation for stock performance
-            }
+    unsigned int firstPurchase = 0;
+    unsigned int lastSale = 0;
+    auto investmentDays = findInvestmentDays(symbol, firstPurchase, lastSale);
 
-        (computeTotalProfitLoss() / (m_history.at(m_history.size() - 1).getSaleDateTime() - m_history.at(0).getPurchaseDateTime()) / 1440);
+    return (computeTotalProfitLoss() / investmentDays) / 100;
+}
+
+float Analyst::findInvestmentDays(const std::string &symbol, unsigned int &firstPurchase, unsigned int &lastSale) {
+    for (unsigned int start = 0; start < m_totalPurchases - 1; start++) {
+        for (unsigned int scanPos = start + 1; scanPos < m_totalPurchases; scanPos++)
+            // If symbol of obj matches desired symbol
+            if (m_history.at(scanPos).getSymbol() == symbol) {
+                // Check that the purchase time is lower
+                if (m_history.at(firstPurchase).getPurchaseDateTime() > m_history.at(scanPos).getPurchaseDateTime()) {
+                    firstPurchase = scanPos;
+                }
+                // Check that the sale time is higher
+                if (m_history.at(lastSale).getSaleDateTime() < m_history.at(scanPos).getSaleDateTime()) {
+                    lastSale = scanPos;
+                }
+            }
     }
-    return 0;
+    // Casting to float so CLion doesn't pester me. I divided it by 1440.0 specifically to make it a float return.
+   return (float) ((m_history.at(lastSale).getSaleDateTime() - m_history.at(firstPurchase).getPurchaseDateTime()) / 1440.0);
 }

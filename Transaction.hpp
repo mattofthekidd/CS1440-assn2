@@ -17,10 +17,10 @@ public:
 
     std::string getSymbol();
     int getQuantity();
-    int getPurchaseDateTime();
+    unsigned int getPurchaseDateTime();
     int getPurchasePrice();
     int getPurchaseFee();
-    int getSaleDateTime();
+    unsigned int getSaleDateTime();
     int getSalePrice();
     int getSaleFee();
 

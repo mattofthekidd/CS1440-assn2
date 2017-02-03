@@ -31,7 +31,8 @@ for(int i = 0; i < 15; i++) {
         std::cout << "Profit/Loss:\t\t" << analyst.getHistory().at(i).computeProfitLoss() << std::endl;
     }
 }
-    std::cout << "Total Profit/Loss:\t" << analyst.computeTotalProfitLoss() << std::endl;
+    std::cout << "Total Profit/Loss:\t$" << analyst.computeTotalProfitLoss() << std::endl;
+    std::cout << "Stock Performance:\t$" << analyst.computeStockPerformance("AMZN") << std::endl;
 
     //std::cout << "Hello, World!" << std::endl;
     return 0;

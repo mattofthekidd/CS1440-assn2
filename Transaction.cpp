@@ -26,7 +26,7 @@ int Transaction::getQuantity() {
     return m_quantity;
 }
 
-int Transaction::getPurchaseDateTime() {
+unsigned int Transaction::getPurchaseDateTime() {
     return m_purchaseDateTime;
 }
 
@@ -38,7 +38,7 @@ int Transaction::getPurchaseFee() {
     return m_purchaseFee;
 }
 
-int Transaction::getSaleDateTime() {
+unsigned int Transaction::getSaleDateTime() {
     return m_saleDateTime;
 }
 
