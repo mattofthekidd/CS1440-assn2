@@ -177,6 +177,33 @@ Comparer.cpp.s:
 	$(MAKE) -f CMakeFiles/Assn2.dir/build.make CMakeFiles/Assn2.dir/Comparer.cpp.s
 .PHONY : Comparer.cpp.s
 
+FormattedTable.o: FormattedTable.cpp.o
+
+.PHONY : FormattedTable.o
+
+# target to build an object file
+FormattedTable.cpp.o:
+	$(MAKE) -f CMakeFiles/Assn2.dir/build.make CMakeFiles/Assn2.dir/FormattedTable.cpp.o
+.PHONY : FormattedTable.cpp.o
+
+FormattedTable.i: FormattedTable.cpp.i
+
+.PHONY : FormattedTable.i
+
+# target to preprocess a source file
+FormattedTable.cpp.i:
+	$(MAKE) -f CMakeFiles/Assn2.dir/build.make CMakeFiles/Assn2.dir/FormattedTable.cpp.i
+.PHONY : FormattedTable.cpp.i
+
+FormattedTable.s: FormattedTable.cpp.s
+
+.PHONY : FormattedTable.s
+
+# target to generate assembly for a file
+FormattedTable.cpp.s:
+	$(MAKE) -f CMakeFiles/Assn2.dir/build.make CMakeFiles/Assn2.dir/FormattedTable.cpp.s
+.PHONY : FormattedTable.cpp.s
+
 Transaction.o: Transaction.cpp.o
 
 .PHONY : Transaction.o
@@ -273,6 +300,9 @@ help:
 	@echo "... Comparer.o"
 	@echo "... Comparer.i"
 	@echo "... Comparer.s"
+	@echo "... FormattedTable.o"
+	@echo "... FormattedTable.i"
+	@echo "... FormattedTable.s"
 	@echo "... Transaction.o"
 	@echo "... Transaction.i"
 	@echo "... Transaction.s"

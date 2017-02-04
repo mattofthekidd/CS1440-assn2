@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Assn2.dir/Transaction.cpp.o"
   "CMakeFiles/Assn2.dir/Utils.cpp.o"
   "CMakeFiles/Assn2.dir/Comparer.cpp.o"
+  "CMakeFiles/Assn2.dir/FormattedTable.cpp.o"
   "Assn2.pdb"
   "Assn2"
 )

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/kidma/CLionProjects/CS1440/Assn2/Analyst.cpp" "/Users/kidma/CLionProjects/CS1440/Assn2/cmake-build-debug/CMakeFiles/Assn2.dir/Analyst.cpp.o"
   "/Users/kidma/CLionProjects/CS1440/Assn2/Comparer.cpp" "/Users/kidma/CLionProjects/CS1440/Assn2/cmake-build-debug/CMakeFiles/Assn2.dir/Comparer.cpp.o"
+  "/Users/kidma/CLionProjects/CS1440/Assn2/FormattedTable.cpp" "/Users/kidma/CLionProjects/CS1440/Assn2/cmake-build-debug/CMakeFiles/Assn2.dir/FormattedTable.cpp.o"
   "/Users/kidma/CLionProjects/CS1440/Assn2/Transaction.cpp" "/Users/kidma/CLionProjects/CS1440/Assn2/cmake-build-debug/CMakeFiles/Assn2.dir/Transaction.cpp.o"
   "/Users/kidma/CLionProjects/CS1440/Assn2/Utils.cpp" "/Users/kidma/CLionProjects/CS1440/Assn2/cmake-build-debug/CMakeFiles/Assn2.dir/Utils.cpp.o"
   "/Users/kidma/CLionProjects/CS1440/Assn2/main.cpp" "/Users/kidma/CLionProjects/CS1440/Assn2/cmake-build-debug/CMakeFiles/Assn2.dir/main.cpp.o"

@@ -93,6 +93,12 @@
 		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Constants.h">
 			<Option target="Assn2"/>
 		</Unit>
+		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/FormattedTable.cpp">
+			<Option target="Assn2"/>
+		</Unit>
+		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/FormattedTable.hpp">
+			<Option target="Assn2"/>
+		</Unit>
 		<Unit filename="/Users/kidma/CLionProjects/CS1440/Assn2/Transaction.cpp">
 			<Option target="Assn2"/>
 		</Unit>
